@@ -1,14 +1,15 @@
 @startgantt gantt
+!include vars.pu
 !include style.pu
 !include function.pu
 
-skinparam LegendBackgroundColor #FFFFFF
+skinparam LegendBackgroundColor LEGEND_BACK_GROUND_COLOR
 
 legend left
 |= |= Accuracy Level |
-|<back:#A4F7B6>        </back>| High |
-|<back:#F6E3B6>        </back>| Middle |
-|<back:#F5F5F5>        </back>| Low |
+|<back:HIGH_ACC_COL>        </back>| High |
+|<back:MIDDLE_ACC_COL>        </back>| Middle |
+|<back:LOW_ACC_COL>        </back>| Low |
 endlegend
 
 projectscale weekly zoom 1
@@ -54,7 +55,7 @@ N("Maintenance", ms1_mai) as [ms1_mai] is 0% completed
 N("PoC", ms2_poc) as [ms2_poc] is 0% completed
 [ms2_poc] starts 2023-04-01
 [ms2_poc] ends 2023-04-30
-[ms2_poc] is colored in $accuracy_color("Middle")
+[ms2_poc] is colored in MIDDLE_ACC_COL
 
 [ms1_req] --> [ms2_poc]
 
@@ -63,7 +64,7 @@ N("PoC", ms2_poc) as [ms2_poc] is 0% completed
 N("PoC", ms3_poc) as [ms3_poc] is 0% completed
 [ms3_poc] starts 2023-05-01
 [ms3_poc] ends 2023-05-30
-[ms3_poc] is colored in $accuracy_color("Low")
+[ms3_poc] is colored in LOW_ACC_COL
 
 [ms2_poc] --> [ms3_poc]
 

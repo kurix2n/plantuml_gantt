@@ -1,14 +1,18 @@
+' the same task name appear multiple times
+
 !procedure N(x,n)
 [x<size:0>n</size>]
 !endprocedure
 
+' accuracy level
+
 !function $accuracy_color($accuracy)
-    !$r="#A4F7B6"
+    !$r=HIGH_ACC_COL
     !if $accuracy == "Low"
-        !$r="#F5F5F5"
+        !$r=LOW_ACC_COL
     !endif
     !if $accuracy == "Middle"
-        !$r="#F6E3B6"
+        !$r=MIDDLE_ACC_COL
     !endif
     !return $r
 !end function
