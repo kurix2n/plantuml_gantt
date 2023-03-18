@@ -12,7 +12,7 @@ You can configure gantt-chart to include the following:
 * Milestones
 * Dependencies
 
-## [style.pu](style.pu)
+## [style.pu](./components/style.pu)
 
 You can configure the drawing format to include the following:
 
@@ -42,7 +42,7 @@ or
 ```
 
 
-## [function.pu](function.pu)
+## [function.pu](./components/function.pu)
 
 Functions to expand.
 ### the same task name appear multiple times
@@ -51,6 +51,6 @@ Functions to expand.
 N("task name", task_id)
 ```
 
-## [vars.pu](vars.pu)
+## [vars.pu](./components/vars.pu)
 
 You can configure color of accuracy levels. 

@@ -1,7 +1,7 @@
 @startgantt gantt
-!include vars.pu
-!include style.pu
-!include function.pu
+!include ./components/vars.pu
+!include ./components/style.pu
+!include ./components/function.pu
 
 skinparam LegendBackgroundColor LEGEND_BACK_GROUND_COLOR
 
