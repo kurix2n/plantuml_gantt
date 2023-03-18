@@ -1,8 +1,10 @@
 # plantUML gantt
 
-This repo is template.
+This repo is template.  
 
-## [main.pu](main.pu)
+![sample](./images/gantt.svg)
+
+## [main.pu](./components/main.pu)
 
 You can configure gantt-chart to include the following:
 
