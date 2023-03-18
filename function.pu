@@ -1,0 +1,14 @@
+!procedure N(x,n)
+[x<size:0>n</size>]
+!endprocedure
+
+!function $accuracy_color($accuracy)
+    !$r="#A4F7B6"
+    !if $accuracy == "Low"
+        !$r="#F5F5F5"
+    !endif
+    !if $accuracy == "Middle"
+        !$r="#F6E3B6"
+    !endif
+    !return $r
+!end function

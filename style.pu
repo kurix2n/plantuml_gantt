@@ -1,0 +1,61 @@
+<style>
+ganttDiagram {
+    unstartedTask {
+        FontName Helvetica
+        FontColor Black
+        FontSize 12
+        FontStyle bold
+        BackGroundColor DeepSkyBlue
+        LineColor DeepSkyBlue
+    }
+    task {
+        FontName Helvetica
+        FontColor Black
+        FontSize 12
+        FontStyle bold
+        BackGroundColor A4F7B6
+        LineColor green
+    }
+    milestone {
+        FontColor black
+        FontSize 12
+        FontStyle bold
+        BackGroundColor yellow
+        LineColor green
+    }
+    note {
+        FontColor DarkGreen
+        FontSize 10
+        LineColor OrangeRed
+    }
+    arrow {
+        FontName Helvetica
+        FontColor black
+        FontSize 12
+        FontStyle bold
+        BackGroundColor 00000000
+        LineColor gray
+        LineThickness 1.0
+    }
+    separator {
+        BackgroundColor 19197080
+        LineStyle 8.0;3.0
+        LineColor 00000000
+        LineThickness 1.0
+        FontSize 16
+        FontStyle bold
+        FontColor White
+        Margin 5
+        Padding 6
+    }
+    timeline {
+        BackgroundColor 283747
+        FontColor Snow
+    }
+    closed {
+        BackgroundColor pink
+        FontColor red
+    }
+}
+</style>
+

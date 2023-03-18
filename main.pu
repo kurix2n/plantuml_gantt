@@ -1,0 +1,70 @@
+@startgantt gantt
+!include style.pu
+!include function.pu
+
+skinparam LegendBackgroundColor #FFFFFF
+
+legend left
+|= |= Accuracy Level |
+|<back:#A4F7B6>        </back>| High |
+|<back:#F6E3B6>        </back>| Middle |
+|<back:#F5F5F5>        </back>| Low |
+endlegend
+
+projectscale weekly zoom 1
+Project starts 2023-03-01
+' saturday are closed
+' sunday are closed
+
+-- Stream 1 --
+
+N("Requirements gathering and analysis", ms1_req) as [ms1_req] is 100% completed
+[ms1_req] starts 2023-03-01
+[ms1_req] ends 2023-03-31
+[Requirements docs] happens at [ms1_req]'s end
+
+N("Design", ms1_des) as [ms1_des] is 100% completed
+[ms1_des] starts 2023-04-01
+[ms1_des] ends 2023-04-30
+
+N("Implementation or coding", ms1_imp) as [ms1_imp] is 100% completed
+[ms1_imp] starts 2023-05-01
+[ms1_imp] ends 2023-05-31
+
+N("Testing", ms1_tes) as [ms1_tes] is 60% completed
+[ms1_tes] starts 2023-06-01
+[ms1_tes] ends 2023-06-30
+
+N("Deployment or release", ms1_dep) as [ms1_dep] is 0% completed
+[ms1_dep] starts 2023-07-01
+[ms1_dep] ends 2023-07-31
+
+N("Maintenance", ms1_mai) as [ms1_mai] is 0% completed
+[ms1_mai] starts 2023-08-01
+[ms1_mai] ends 2023-08-31
+
+[ms1_req] --> [ms1_des]
+[ms1_des] --> [ms1_imp]
+[ms1_imp] --> [ms1_tes]
+[ms1_tes] --> [ms1_dep]
+[ms1_dep] --> [ms1_mai]
+
+-- Stream 2 -- 
+
+N("PoC", ms2_poc) as [ms2_poc] is 0% completed
+[ms2_poc] starts 2023-04-01
+[ms2_poc] ends 2023-04-30
+[ms2_poc] is colored in $accuracy_color("Middle")
+
+[ms1_req] --> [ms2_poc]
+
+-- Stream 3 -- 
+
+N("PoC", ms3_poc) as [ms3_poc] is 0% completed
+[ms3_poc] starts 2023-05-01
+[ms3_poc] ends 2023-05-30
+[ms3_poc] is colored in $accuracy_color("Low")
+
+[ms2_poc] --> [ms3_poc]
+
+@endgantt
